@@ -35,7 +35,6 @@ const EmployeeOfTheMonthPage = () => {
       try {
         const response = await axios.get("/topworker/getAll");
         setWorker(response.data.records);
-        console.log(response.data.records);
         if (!response.data.records) {
           setError(true);
         }
@@ -68,21 +67,21 @@ const EmployeeOfTheMonthPage = () => {
           <div className="employee-row one">
             <span>#1</span>
             <h3>
-              {(worker[0].userId && worker[0].userId.fullName) ||
+              {(worker[0].user && worker[0].user.fullName) ||
                 "Сотрудник удален"}
             </h3>
           </div>
           <div className="employee-row two">
             <span>#2</span>
             <h3>
-              {(worker[1].userId && worker[1].userId.fullName) ||
+              {(worker[1].user && worker[1].user.fullName) ||
                 "Сотрудник удален"}
             </h3>
           </div>
           <div className="employee-row three">
             <span>#3</span>
             <h3>
-              {(worker[2].userId && worker[2].userId.fullName) ||
+              {(worker[2].user && worker[2].user.fullName) ||
                 "Сотрудник удален"}
             </h3>
           </div>
@@ -98,10 +97,10 @@ const EmployeeOfTheMonthPage = () => {
           <div className="employee-topworker_items">
             <img src={plug} alt="" />
             <p>
-              {(worker[0].userId && worker[0].userId.fullName) ||
+              {(worker[0].user && worker[0].user.fullName) ||
                 "Сотрудник удален"}
             </p>
-            <span>{(worker[0].userId && worker[0].userId.role) || " "}</span>
+            <span>{(worker[0].user && worker[0].user.role) || " "}</span>
           </div>
         </div>
       </section>

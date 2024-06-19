@@ -57,88 +57,18 @@ const Form = () => {
     if (attributes) {
       count = Object.values(attributes).filter(Boolean).length;
     }
-    const now = new Date();
 
     axios
-      .put("/topworker/getLast", {
+      .post("/topworker/adding", {
         userId: currentUserId,
+        currentUserId: userData._id,
+        count: count,
       })
       .then((response) => {
-        const dateOfCreate = new Date(response.data.latestRecord.createdAt);
-        if (now.getDate() > 25) {
-          if (
-            dateOfCreate.getMonth() == now.getMonth() &&
-            dateOfCreate.getDate() > 25
-          ) {
-            axios
-              .post("/topworker/updating", {
-                _id: response.data.latestRecord._id,
-                count: count,
-              })
-              .then((response) => {
-                console.log(response.data);
-              })
-              .catch((error) => {
-                console.error(error);
-              });
-          } else {
-            axios
-              .post("/topworker/adding", {
-                userId: currentUserId,
-                currentUserId: userData._id,
-                count: count,
-              })
-              .then((response) => {
-                console.log(response.data);
-              })
-              .catch((error) => {
-                console.error(error);
-              });
-          }
-        } else {
-          if (dateOfCreate.getMonth() == now.getMonth()) {
-            console.log(dateOfCreate.getMonth(), now.getMonth());
-            axios
-              .post("/topworker/updating", {
-                _id: response.data.latestRecord._id,
-                count: count,
-              })
-              .then((response) => {
-                console.log(response.data);
-              })
-              .catch((error) => {
-                console.error(error);
-              });
-          } else {
-            console.log(dateOfCreate.getMonth(), now.getMonth());
-            axios
-              .post("/topworker/adding", {
-                userId: currentUserId,
-                currentUserId: userData._id,
-                count: count,
-              })
-              .then((response) => {
-                console.log(response.data);
-              })
-              .catch((error) => {
-                console.error(error);
-              });
-          }
-        }
+        console.log(response.data);
       })
-      .catch((err) => {
-        axios
-          .post("/topworker/adding", {
-            userId: currentUserId,
-            currentUserId: userData._id,
-            count: count,
-          })
-          .then((response) => {
-            console.log(response.data);
-          })
-          .catch((error) => {
-            console.error(error);
-          });
+      .catch((error) => {
+        console.error(error);
       });
   };
 

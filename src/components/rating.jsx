@@ -69,7 +69,7 @@ const RatingOfEmployeesPage = () => {
                 <div className="employee-row">
                   <span>#{index + 1}</span>
                   <h3>
-                    {(work.userId && work.userId.fullName) ||
+                    {(work.user && work.user.fullName) ||
                       "Сотрудник удален"}
                   </h3>
                 </div>
@@ -79,7 +79,7 @@ const RatingOfEmployeesPage = () => {
             <p>
               {year < currentYear ||
               (year === currentYear && month < currentMonth)
-                ? "За текущий период cтатистика в архиве"
+                ? "Данные за текущий период устарели"
                 : "За текущий период статистики нет"}
             </p>
           )}

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "../axios.js";
 import "../styles/SchedulePage.css";
 import upload from "../images/upload.png";
 import { getCurrentDaysWeek } from "../utils/dateUtils.js";
 
 const SchedulePage = () => {
-  const [imageUrlChbr, setImageUrlChbr] = React.useState([]);
-  const inputFileRefChbr = React.useRef(null);
+  const [imageUrlChbr, setImageUrlChbr] = useState([]);
+  const inputFileRefChbr = useRef(null);
 
   const handleChangeFile = async (event) => {
     try {
