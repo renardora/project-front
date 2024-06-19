@@ -12,9 +12,8 @@ const SchedulePage = () => {
   const [error, setError] = useState(null);
   const [message, setMessage] = useState();
   const [allTimes, setAllTimes] = useState([]);
-
-  const [imageUrlManagers, setImageUrlManagers] = React.useState([]);
-
+  const [selectedDay, setSelectedDay] = useState(null);
+  const [imageUrlManagers, setImageUrlManagers] = useState([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
@@ -93,11 +92,18 @@ const SchedulePage = () => {
     const key = `${day}/${time}`;
     setSelectedTimes((prev) => {
       const newSelectedTimes = new Set(prev);
+
       if (newSelectedTimes.has(key)) {
         newSelectedTimes.delete(key);
       } else {
+        for (let item of newSelectedTimes) {
+          if (item.startsWith(day)) {
+            newSelectedTimes.delete(item);
+          }
+        }
         newSelectedTimes.add(key);
       }
+
       return newSelectedTimes;
     });
   };
