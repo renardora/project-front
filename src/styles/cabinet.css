@@ -1,0 +1,74 @@
+.container > h1 {
+    font-size: 48px;
+    text-align: center;
+    margin: 39px auto 29px;
+}
+.container section {
+    display: flex;
+    flex-direction: row;
+    width: 1410px;
+    margin: 0 auto;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 50px 130px 0;
+}
+.person img {
+    width: 380px;
+    height: 380px;
+    border-radius: 20px;
+}
+.person h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 39px 0 26px;
+}
+.person h3 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.pers_info {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pers_info_item {
+    width: 460px;
+    height: 160px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    margin: 15px 15px;
+}
+.pers_info_item h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+.pers_info_item span {
+    font-size: 36px;
+}
+
+.pers-button {
+    font: 400 24px 'Flame';
+    color: white;
+    width: 300px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    background-color: #FF8732;
+    outline: none;
+    transition: 0.3s;
+    margin: 45px 95px;
+}
+.pers-button:hover {
+    color: #FF8732;
+    background-color: #fff;
+}
+.pers-button:active {
+    border: 3px solid #FF8732;
+    transition: 0.05s;
+}

@@ -1,0 +1,116 @@
+.schedule-current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 80px 60px;
+}
+.schedule-photo {
+  width: 90vw;
+  margin: auto;
+}
+.schedule-current h1 {
+  font-size: 48px;
+}
+.schedule-current-div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.schedule-current h2 {
+  font-size: 42px;
+}
+
+.schedule-next {
+  margin: 0px 80px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.schedule-next h1 {
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.schedule-table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  border: 5px solid #763E17;
+}
+
+.schedule-table-item > th, .schedule-table-item > td {
+  border: 3px solid #763E17;
+  border-left: 5px solid #763E17;
+  padding: 8px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+}
+.schedule-table-item > th {
+  background-color: rgb(220, 184, 132);
+  border-bottom: 5px solid #763E17;
+  width: 14.28%;
+}
+
+.schedule-table td {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.schedule-table td.selected {
+  background-color: rgb(220, 184, 132);
+}
+
+.schedule-table td.unselectable {
+  background-color: rgb(227, 124, 103);
+  pointer-events: none;
+}
+
+.schedule-button {
+  font: 400 24px 'Flame';
+  border-radius: 30px;
+  width: 370px;
+  height: 77px;
+  font-size: 36px;
+  margin-top: 40px;
+  border: none;
+  color: #fff;
+  background-color: #FF8732;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.schedule-button-ex {
+  width: 878px;
+}
+
+.schedule-button:hover {
+  color: #FF8732;
+  background-color: #fff;
+}
+.schedule-button:active {
+  border: 3px solid #FF8732;
+  transition: 0.05s;
+}
+
+.isButtonDisabled {
+  display: none;
+}
+
+.schedule-ces- {
+  position: relative;
+}
+.schedule-upload {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 86px;
+  height: 86px;
+  background-color: #F5EBDC;
+  border: 4px solid #763E17;
+  border-radius: 20px;
+}
+.schedule-upload img {
+  width: 60px;
+  height: 60px;
+}

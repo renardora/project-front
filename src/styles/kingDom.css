@@ -1,0 +1,38 @@
+.kingdom h1 {
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.kingdom-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+
+.kingdom-sec-item {
+    display: flex;
+    width: 458px;
+    height: 571px;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 28px;
+    color: #763E17;
+    transition: .3s;
+}
+.kingdom-sec-item img {
+    height: 330px;
+}
+.kingdom-sec-item h2 {
+    font-weight: 400;
+    margin-top: 44px;
+}
+.kingdom-sec-item:hover {
+    box-shadow: 15px 15px #D1C9BC;
+}

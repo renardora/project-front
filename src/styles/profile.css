@@ -1,0 +1,59 @@
+.profile-container > h1 {
+    font-size: 48px;
+    text-align: center;
+    margin: 39px auto;
+}
+
+.profile-info {
+    background-color: white;
+    width: 50%;
+    margin: 2.5% auto;
+    padding: 2.5%;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-button {
+    font: inherit;
+    width: 448px;
+    height: 77px;
+    margin: 2% auto 1%;
+    transition: 0.3s;
+    font-size: 32px;
+    color: #fff;
+    background-color: #FF8732;
+    border: none;
+    border-radius: 30px;
+}
+.profile-button:hover {
+    color: #FF8732;
+    background-color: #fff;
+}
+.profile-button:active {
+    border: 3px solid #FF8732;
+    transition: 0.05s;
+}
+.profile-label {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.profile-label > input, select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 5% 0;
+    border-radius: 20px;
+    border: 3px solid #763E17;
+    font: 400 22px 'Flame';
+    color: #763E17;
+    outline: none;
+}
+.profile-label > p {
+    margin: 10px;
+    font-size: 24px;
+}

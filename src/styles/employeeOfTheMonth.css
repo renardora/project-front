@@ -1,0 +1,169 @@
+.employee-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.employee-top3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.employee-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 722px;
+    height: 143px;
+    background-color: #F5DDB8;
+    border-radius: 30px;
+    text-align: center;
+    margin: 25px;
+    box-shadow: 15px 15px #D8C6AB;
+}
+.employee-row span {
+    font-size: 52px;
+    margin: 0 35px 0;
+}
+.employee-row h3 {
+    font-size: 36px;
+    text-align: left;
+}
+
+.one {
+    background-color: #F4CF97;
+    box-shadow: 15px 15px #E0BD88;
+}
+.one span {
+    color: #B99000;
+}
+.two span {
+    color: #B4B0A2;
+}
+.three span {
+    color: #924C1B;
+}
+
+.employee-top-button {
+    font: inherit;
+    width: 448px;
+    height: 77px;
+    margin-top: 45px;
+    transition: 0.3s;
+    font-size: 32px;
+    color: #fff;
+    background-color: #FF8732;
+    border: none;
+    border-radius: 30px;
+}
+.employee-top-button:hover {
+    color: #FF8732;
+    background-color: #fff;
+}
+.employee-top-button:active {
+    border: 3px solid #FF8732;
+    transition: 0.05s;
+}
+
+.employee-topworker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.employee-topworker_items {
+    display: flex;
+    flex-direction: column;
+}
+.employee-topworker h1 {
+    font-size: 48px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.employee-topworker_items img {
+    width: 370px;
+    height: 370px;
+    border-radius: 20px;
+
+}
+.employee-topworker_items p {
+    font-size: 36px;
+    text-align: center;
+}
+.employee-topworker_items span {
+    font-size: 32px;
+    text-align: center;
+}
+
+.employee-vote {
+    background-image: url(../images/back_vote.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 1481px;
+    height: 705px;
+    margin: 60px auto;
+}
+.employee-vote h1 {
+    margin-top: 120px;
+    margin-bottom: 0px;
+}
+.employee-vote-button {
+    font: inherit;
+    width: 448px;
+    height: 77px;
+    margin: 20px auto;
+    transition: 0.3s;
+    font-size: 32px;
+    color: #fff;
+    background-color: #FF8732;
+    border: none;
+    border-radius: 30px;
+}
+.employee-vote-button:hover {
+    color: #FF8732;
+    background-color: #fff;
+}
+.employee-vote-button:active {
+    border: 3px solid #FF8732;
+    transition: 0.05s;
+}
+
+.employee-of-the-month-page {
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 1481px;
+    height: 705px;
+    margin: 60px auto;
+}
+.employee-of-the-month-page form {
+    height: 65%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.employee-of-the-month-page label {
+
+    margin: 0 10px 35px;
+    font-size: 32px;
+}
+
+.employee-of-the-month-page input[type="checkbox"] {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}

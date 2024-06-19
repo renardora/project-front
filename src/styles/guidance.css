@@ -1,0 +1,97 @@
+.standarts-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+
+.standarts-sec1 {
+    display: flex;
+    width: 458px;
+    height: 571px;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 24px;
+    color: #763E17;
+    transition: .3s;
+}
+
+.standarts-sec1:hover {
+    box-shadow: 15px 15px #D1C9BC;
+}
+
+.standarts-sec1 img {
+    height: 330px;
+}
+.standarts h1 {
+    font-weight: 700;
+    margin-top: 39px;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+}
+.standarts-sec1 h2 {
+    font-weight: 400;
+}
+
+.documents-sec {
+    background-color: white;
+    width: 905px;
+    height: 501px;
+    border-radius: 20px;
+    padding: 35px;
+}
+.documents-item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 3px solid #D9D9D9;
+}
+.documents-item-in {
+    display: flex;
+    flex-direction: row;
+}
+.documents-item-info {
+    display: flex;
+    flex-direction: column;
+}
+.documents-item img {
+    width: 53px;
+    height: 53px;
+}
+.documents-item h2 {
+    font-size: 32px;
+    margin: 0 23px;
+}
+.documents-item span {
+    font-size: 20px;
+    margin: 0 23px;
+}
+.gui-button_control {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #FF8732;
+    border: none;
+    border-radius: 50%;
+    margin: 5px 5px 0;
+}
+.gui-button_control img {
+    width: 30px;
+    height: 30px;
+}
+.gui-top-button {
+    position: absolute;
+    right: 5%;
+}
+.gui-top-button-2 {
+    position: absolute;
+    right: 9%;
+}
