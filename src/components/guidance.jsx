@@ -6,7 +6,6 @@ import pdf from "../images/pdf.png";
 import axios from "../axios.js";
 import AddFileButton from "./modalAddFile.jsx";
 import modifyw from "../images/modifyw.png";
-import modifyb from "../images/modifyb.png";
 import deleteb from "../images/deleteb.png";
 
 const GuidancePage = () => {
@@ -18,11 +17,6 @@ const GuidancePage = () => {
   const [subSec, setSubSec] = useState(subSection);
   const [showButtons, setShowButtons] = useState(false);
   const [role, setRole] = useState(false);
-
-  useEffect(() => {
-    fetchDocsData();
-    fetchUserData();
-  }, []);
 
   const fetchDocsData = async () => {
     const sect = sec;
@@ -88,13 +82,18 @@ const GuidancePage = () => {
     window.open(fileURL);
   };
 
+  useEffect(() => {
+    fetchDocsData();
+    fetchUserData();
+  }, []);
+
   if (loading) return <p>Загрузка...</p>;
   if (error) return <p>Ошибка при загрузке данных: {error.message}</p>;
 
   return (
     <main className="standarts">
       <h1>
-      {subSec}
+        {subSec}
         {role && (
           <>
             <AddFileButton sec={sec} subSec={subSec} />
@@ -117,7 +116,9 @@ const GuidancePage = () => {
           {docData.map((doc, index) => (
             <div key={index}>
               <div
-                className="documents-item"
+                className={`documents-item ${
+                  index === docData.length - 1 ? "last-item" : ""
+                }`}
                 onClick={() => downloadFile(doc.fileURL)}
               >
                 <div className="documents-item-in">

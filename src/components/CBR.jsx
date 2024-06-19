@@ -18,15 +18,6 @@ const CBRPage = () => {
   const [showButtons, setShowButtons] = useState(false);
   const [role, setRole] = useState(false);
 
-  useEffect(() => {
-    fetchDocsData();
-    
-  }, []);
-
-  useEffect (() => {
-    fetchUserData();
-  }, [])
-
   const fetchDocsData = async () => {
     const sect = sec;
     const subSect = subSec;
@@ -90,6 +81,11 @@ const CBRPage = () => {
   const downloadFile = (fileURL) => {
     window.open(fileURL);
   };
+
+  useEffect(() => {
+    fetchDocsData();
+    fetchUserData();
+  }, []);
 
   if (loading) return <p>Загрузка...</p>;
   if (error) return <p>Ошибка при загрузке данных: {error.message}</p>;

@@ -24,10 +24,10 @@
 .standarts-sec1 img {
     height: 450px;
 }
-.standarts-sec1 h1 {
+.standarts-sec1 h2 {
     font-weight: 400;
     margin-top: 44px;
-    font-size: 40px;
+    font-size: 42px;
 }
 
 .standarts-sec-item {
@@ -48,6 +48,7 @@
 
 .standarts-sec-item h2 {
     font-weight: 400;
+    margin-top: 44px;
 }
 
 .standarts-sec2 {

@@ -54,6 +54,9 @@
     padding: 20px 0;
     border-bottom: 3px solid #D9D9D9;
 }
+.documents-item.last-item {
+    border-bottom: none;
+}
 .documents-item-in {
     display: flex;
     flex-direction: row;
@@ -95,3 +98,71 @@
     position: absolute;
     right: 9%;
 }
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .search-input {
+    position: absolute;
+    right: 50px;
+    top: 185px;
+    font: inherit;
+    font-size: 20px !important;
+    color: #763E17;
+    width: 450px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 245px;
+    right: 50px;
+    font-size: 20px;
+    color: #763E17;
+    width: 470px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: gray #ffffff;
+    scrollbar-arrow-color: transparent;
+  }
+  
+  .search-results-item {
+    padding: 10px;
+    border-bottom: 2px solid #D9D9D9;
+    cursor: pointer;
+  }
+  .search-results-item.last-item {
+    border-bottom: none;
+}
+  
+  .search-results-item:hover {
+    background-color: #f1f1f1;
+  }
+  .search-results::-webkit-scrollbar {
+    width: 10px; /* Ширина полосы прокрутки */
+  }
+  
+  /* Стилизация ползунка полосы прокрутки */
+  .search-results::-webkit-scrollbar-thumb {
+    background: #888; /* Цвет ползунка */
+    border-radius: 30px; /* Радиус скругления углов ползунка */
+  }
+  
+  /* Стилизация ползунка при наведении курсора */
+  .search-results::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Цвет ползунка при наведении */
+  }
+
+
+  
