@@ -30,7 +30,6 @@ const SchedulePage = () => {
     try {
       const response = await axios.get("/schedule/aup/getAll");
       setAllTimes(response.data);
-      console.log(",kznm");
     } catch (error) {
       console.error("Ошибка при получении расписания:", error);
     }
@@ -43,7 +42,6 @@ const SchedulePage = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       setIsSubmitted(response.data.isSubmitted);
-      console.log("cerf");
     } catch (error) {
       console.error("Ошибка при проверке статуса отправки:", error);
     }

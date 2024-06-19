@@ -88,7 +88,6 @@ const SchedulePage = () => {
     const day = now.getDay();
     const hours = now.getHours();
 
-    // Блокируем кнопку, если текущее время с субботы 23:59 до понедельника 00:00
     if ((day === 0 && hours < 24) || (day === 6 && hours >= 23)) {
       setIsButtonDisabled(true);
     } else {

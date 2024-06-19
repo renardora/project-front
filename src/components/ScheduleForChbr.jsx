@@ -14,7 +14,7 @@ const SchedulePage = () => {
       const file = event.target.files[0];
       formData.append("image", file);
       const response = await axios.post("/uploadimage/chbr", formData);
-      const fullImageUrl = `${process.env.REACT_APP_API_URL}${response.data.url}`;
+      const fullImageUrl = `http://localhost:4444${response.data.url}`;
       localStorage.setItem("lastImageChbr", fullImageUrl);
       setImageUrlChbr(fullImageUrl);
     } catch (error) {

@@ -46,7 +46,6 @@ const CabinetPage = () => {
       },
     });
 
-    console.log(response.data.url);
     setUserData((prevData) => ({ ...prevData, avatarUrl: response.data.url }));
   };
 

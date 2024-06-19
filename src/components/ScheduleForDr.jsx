@@ -17,9 +17,10 @@ const SchedulePage = () => {
       const file = event.target.files[0];
       formData.append("image", file);
       const response = await axios.post("/uploadimage/chbr", formData);
-      const fullImageUrl = `${process.env.REACT_APP_API_URL}${response.data.url}`;
+      const fullImageUrl = `http://localhost:4444${response.data.url}`;
       localStorage.setItem("lastImageChbr", fullImageUrl);
       setImageUrlChbr(fullImageUrl);
+      console.log(response.data.url);
     } catch (error) {
       console.error(error);
       alert("Ошибка при загрузке фото");
@@ -32,7 +33,7 @@ const SchedulePage = () => {
       const file = event.target.files[0];
       formData.append("image", file);
       const response = await axios.post("/uploadimage/managers", formData);
-      const fullImageUrl = `${process.env.REACT_APP_API_URL}${response.data.url}`;
+      const fullImageUrl = `http://localhost:4444${response.data.url}`;
       localStorage.setItem("lastImageManagers", fullImageUrl);
       setImageUrlManagers(fullImageUrl);
     } catch (error) {
@@ -116,7 +117,6 @@ const SchedulePage = () => {
               hidden
             />
             <img className="schedule-photo" src={imageUrlChbr} alt="" />
-            
           </div>
         </div>
 
