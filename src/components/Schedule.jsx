@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "../axios";
 import "../styles/SchedulePage.css";
 import { getCurrentDaysWeek } from "../utils/dateUtils.js";
-import plug from "../images/заглушка.png"
+import plug from "../images/заглушка.png";
 
 import timeLimits from "../assets/time-limits.json";
 
@@ -50,6 +50,7 @@ const SchedulePage = () => {
     try {
       const response = await axios.get("/schedule/chbr/getAll");
       setAllTimes(response.data);
+      
       setLoading(false);
     } catch (error) {
       console.error("Ошибка при получении расписания:", error);
@@ -64,6 +65,7 @@ const SchedulePage = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUserData(response.data.userData);
+      console.log(response.data.userData);
       setLoading(false);
     } catch (err) {
       setError(err);
@@ -141,7 +143,9 @@ const SchedulePage = () => {
       if (day === el.day && time === el.time) count++;
     });
 
-    const limit = timeLimits.find((item) => item.time === time && item.day === day)?.limit;
+    const limit = timeLimits.find(
+      (item) => item.time === time && item.day === day
+    )?.limit;
 
     return count >= limit;
   };
